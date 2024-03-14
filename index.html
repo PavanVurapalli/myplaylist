@@ -331,9 +331,13 @@
       `
       document.getElementById('dum').innerHTML=k;
       document.title=songs[n].songName;
-      document.getElementById(n).play();
       document.getElementById(`suii${n}`).classList.replace('fa-play','fa-pause');
 
+      document.getElementById('video-background').addEventListener("play", function() 
+      {
+        document.getElementById(n).play();
+      });
+    
       document.getElementById(n).addEventListener('loadedmetadata',function() 
       {
         document.getElementById('end').innerText=formatTime(this.duration);
