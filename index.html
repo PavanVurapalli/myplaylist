@@ -330,7 +330,6 @@
       </div> 
       `
       document.getElementById('dum').innerHTML=k;
-      document.body.style.backgroundImage=`url("${songs[n].bgImg}")`;
       document.title=songs[n].songName;
       document.getElementById(n).play();
       document.getElementById(`suii${n}`).classList.replace('fa-play','fa-pause');
@@ -366,8 +365,8 @@
       }
       if(a.paused)
       {
-        a.play();
         document.getElementById("video-background").play();
+        a.play();
         document.getElementById('null').classList.remove('paused');
         b.classList.replace('fa-play','fa-pause');
         currentSong=a;
@@ -386,30 +385,18 @@
     {
       let b=document.getElementById(`suii${n}`);
       b.classList.replace('fa-pause','fa-play');
-      if(n+1!=songs.length)
-      {
-        document.body.style.backgroundImage=`url("${songs[n+1].bgImg}")`; 
-        play(n+1);
-      }
+      if(n+1!=songs.length) play(n+1);
       else document.getElementById('null').classList.toggle('paused');
     }
 
     function next(n)
     {
-      if(n+1!=songs.length)
-      {
-        document.body.style.backgroundImage=`url("${songs[n+1].bgImg}")`;
-        play(n+1);
-      }
+      if(n+1!=songs.length) play(n+1);
     }
 
     function back(n)
     {
-      if(n-1!=-1)
-      {
-        document.body.style.backgroundImage=`url("${songs[n-1].bgImg}")`; 
-        play(n-1);
-      }
+      if(n-1!=-1) play(n-1);
     }
 
     function formatTime(n)
