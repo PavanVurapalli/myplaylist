@@ -3,12 +3,22 @@
 <head>
   <link rel="website icon" href="https://play-lh.googleusercontent.com/nj9CLgBK8RbU88awykd1BSkwozeNi2TgibnJa9lWM2SmdH3yJHAD2FC2t6b2JEOCqg" type="png">
   <title>My Playlist</title>
-  <meta content="dark light" name="color-scheme">
-  <script src="https://kit.fontawesome.com/eeef7fd755.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <style>
     *{
       font-family: 'Times New Roman', Times, serif;
     }
+    @media only screen and (max-width: 768px) {
+  #main {
+    width: 80%;
+  }
+
+  .display {
+    font-size: 14px;
+  }
+
+  /* Add more styles for smaller screens here */
+}
     body{
       margin: 0;
       background-image: url("https://getwallpapers.com/wallpaper/full/8/5/2/1203205-desktop-backgrounds-music-2560x1600-download-free.jpg");
@@ -162,6 +172,9 @@
       position: absolute;
       left: 1050px;
       transform: scale(1.5);
+    }
+    .fa-house:hover{
+      transform: scale(2.0);
     }
     #video-background {
       position: fixed;
